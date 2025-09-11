@@ -10,3 +10,8 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+@layer components {
+  .section-container {
+    @apply mx-auto max-w-6xl;
+  }
+}
