@@ -1,4 +1,4 @@
-import BannerSec from "@/components/shared/BannerSec";
+import BannerSec from "@/components/shared/Banner/BannerSec.tsx";
 import CourseIncludes from "@/components/shared/CourseIncludes";
 
 const All_PurchasedCourses = () => {
