@@ -30,7 +30,7 @@ const CourseIncludes = ({
   ];
 
   return (
-    <div className="flex flex-col gap-6 border-2 rounded-2xl p-5 w-full">
+    <div className="flex flex-col gap-6 border-[1px] rounded-2xl p-5 w-full">
       <h1 className="text-2xl font-bold">Course Includes :</h1>
       <div className="flex gap-3 flex-col">
         {items.map(({ label, value, icon: Icon, span }) => (
