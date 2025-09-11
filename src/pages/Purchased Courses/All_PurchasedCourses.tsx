@@ -1,7 +1,7 @@
-import BannerSec from "@/components/shared/BannerSec";
 import CardMentor from "@/components/shared/Cards/CardMentor";
 import CourseIncludes from "@/components/shared/CourseIncludes";
 import LeftSide from "./LeftSide";
+import BannerSec from "@/components/shared/Banner/BannerSec";
 
 const All_PurchasedCourses = () => {
   return (

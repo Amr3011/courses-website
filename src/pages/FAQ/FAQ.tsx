@@ -2,7 +2,7 @@ import BannerSec from "@/components/shared/Banner/BannerSec.tsx";
 
 const Faq = () => {
     return (
-        <div>
+        <div className="w-[1200px] justify-center mx-auto">
             <BannerSec
                 title={"Frequently Asked "}
                 colorTitle={"Question"}
