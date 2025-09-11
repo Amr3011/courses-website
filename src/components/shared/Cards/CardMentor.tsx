@@ -9,7 +9,7 @@ const CardMentor = ({
 }: CardMentorProps) => {
   return (
     <div
-      className={`min-h-[100px] w-full border-2 flex ${
+      className={`min-h-[100px] w-full border-[1px] flex ${
         center && "flex-col text-center items-center gap-6 bg-[#F2F5F5] "
       }  overflow-hidden p-5 rounded-xl my-5`}
     >

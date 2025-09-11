@@ -1,3 +1,4 @@
+import CourseCurriculum from "./CourseCurriculum";
 
 const LeftSide = () => {
   return (
@@ -24,7 +25,9 @@ const LeftSide = () => {
         Through real projects, you’ll go from user problem to clickable
         prototype with confidence.
       </p>
-      <div className="w-full h-screen"></div>
+      <div>
+        <CourseCurriculum />
+      </div>
     </div>
   );
 };
