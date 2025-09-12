@@ -7,12 +7,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        "primary-1": "#D71313",
-        "hover_primary-1":"#B91C1C",
-        "secondry-1": "#D9D9D9",
+        "heading-color": "#000",
+        "primary-color": "#1a69df",
+        "dark-color": "#093e74",
+        "border": "#bcc8cc",
+        "subtle-color": "#ecf9ff",
+        "light-color": "#a2dbff",
+        "sub-title": "#202020",
+        "text": "#353738",
+        "light-text": "#535557",
+        "background-accent": "#f2f5f5",
+      },
+      fontFamily: {
+        body: ["Inter", "sans-serif"],
+        heading: ['"Inter Tight"', "sans-serif"],
       },
     },
   },
   plugins: [],
 }
-

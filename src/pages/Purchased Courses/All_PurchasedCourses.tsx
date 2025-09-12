@@ -5,15 +5,15 @@ import BannerSec from "@/components/shared/Banner/BannerSec";
 
 const All_PurchasedCourses = () => {
   return (
-    <section className="section-container p-2  ">
+    <section className="container p-2 ">
       <div className="w-full ">
         <BannerSec
           title="Mastering Creative UI/UX Design"
           paragraph="Build intuitive, beautiful user interfaces and improve user experience with practical design techniques."
         />
-        <div className="flex flex-col md:flex-row gap-8 ">
+        <div className="grid grid-cols-3  mt-[7rem] gap-6 ">
           <LeftSide />
-          <div className="w-full md:w-[30%]  ">
+          <div className="w-full  ">
             <div className="sticky top-12">
               <CourseIncludes
                 Level="Medium"

@@ -1,24 +1,25 @@
 const BannerSec = ({
-                       title,
-                       paragraph,
-                       colorTitle,
-                   }: {
-    title: string;
-    paragraph?: string;
-    colorTitle?: string;
+  title,
+  paragraph,
+  colorTitle,
+}: {
+  title: string;
+  paragraph?: string;
+  colorTitle?: string;
 }) => {
-    return (
-        <div
-            className=" bg-[#EDF9FF] w-full text-center flex flex-col gap-5 justify-center items-center py-9 rounded-2xl mt-4 mb-7 md:mb-16">
-            <div>
-                <h1 className="text-3xl md:text-6xl font-sans font-bold">{title} <span
-                    className="text-blue-500">{colorTitle}</span></h1>
+  return (
+    <div className=" bg-subtle-color w-full text-center flex flex-col  justify-center items-center py-16 rounded-2xl mt-4">
+      <div>
+        <h1 className="text-4xl md:text-5xl  font-semibold font-heading">
+          {title} <span className="text-blue-500">{colorTitle}</span>
+        </h1>
+      </div>
 
-            </div>
-
-            <p className="text-xs md:text-lg font-sans mt-5">{paragraph}</p>
-        </div>
-    );
+      <p className="text-[14px] font-normal leading-6 mt-5 font-body opacity-70">
+        {paragraph}
+      </p>
+    </div>
+  );
 };
 
 export default BannerSec;
