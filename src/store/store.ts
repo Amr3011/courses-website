@@ -9,7 +9,7 @@ const Chapter = {
         },
         {
             id: 2,
-            nameLesson: "Understanding User-Centered Design",
+            nameLesson: "Understanding  Design",
             Time_Of_lesson: 20,
         },
         {

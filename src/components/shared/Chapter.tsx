@@ -44,8 +44,8 @@ const Chapter = ({
                 withButton ? "px-4" : "px-9"
               } bg-[#F2F5F5] rounded-lg text-xs hover:bg-[#ECF9FF] hover:scale-x-105 duration-500`}
             >
-              <h2 className="text-sm">{lesson.nameLesson}</h2>
-              <span>{`${lesson.Time_Of_lesson} Min`}</span>
+              <h2 className="text-xs line-clamp-1 ">{lesson.nameLesson}</h2>
+              <span className="text-xs line-clamp-1">{`${lesson.Time_Of_lesson} Min`}</span>
             </Link>
           </li>
         ))}
