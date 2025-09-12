@@ -2,6 +2,7 @@ export type LevelsType = "Beginner" | "Medium" | "Hard" | "AllLevels";
 type lesson = {
     nameLesson: string
     Time_Of_lesson: number
+    id: number
 }
 export type ChapterType = {
     title: string;
