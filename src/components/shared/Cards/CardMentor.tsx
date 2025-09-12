@@ -9,7 +9,7 @@ const CardMentor = ({
 }: CardMentorProps) => {
   return (
     <div
-      className={`min-h-[100px] w-full border-[1px] flex ${
+      className={`min-h-[100px] w-full border-[1px] border-border gap-3 flex ${
         center && "flex-col text-center items-center gap-6 bg-[#F2F5F5] "
       }  overflow-hidden p-5 rounded-xl my-5`}
     >
@@ -23,7 +23,7 @@ const CardMentor = ({
       <div className="w-full px-3 flex flex-col gap-2">
         <h1 className="text-2xl font-semibold">{name}</h1>
         <p>{namePosition}</p>
-        <ul className={`flex gap-3 ${center && "justify-center gap-14 py-2"}`}>
+        <ul className={`flex gap-11 ${center && "justify-center gap-14 py-2"}`}>
           {socialMedia.map((el, idx) => (
             <li className="h-4 w-4" key={idx}>
               <a href={el.link} target="_blank">

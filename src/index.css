@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-}
 
 body {
   padding: 0;
@@ -11,7 +9,11 @@ body {
   box-sizing: border-box;
 }
 @layer components {
-  .section-container {
-    @apply mx-auto max-w-6xl;
+  .container {
+    max-width: 1130px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }

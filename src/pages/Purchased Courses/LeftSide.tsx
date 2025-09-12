@@ -2,11 +2,11 @@ import CourseCurriculum from "./CourseCurriculum";
 
 const LeftSide = () => {
   return (
-    <div className="w-full  md:w-[70%]  ">
+    <div className="col-span-2 ">
       <img
         src="https://cdn.prod.website-files.com/67fdceadc4bf2fac05c7defb/683710ee854936d927d6e04a_pexels-mart-production-7679662.avif"
         alt="img"
-        className="object-cover w-full max-h-[350px] h-full rounded-xl mb-8"
+        className="object-cover w-full max-h-[330px] h-full rounded-xl mb-8 overflow-hidden"
       />
       <p className="font-normal text-slate-700 my-4">
         Great design goes beyond appearance — it creates intuitive, enjoyable

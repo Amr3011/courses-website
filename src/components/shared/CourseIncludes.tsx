@@ -17,20 +17,19 @@ const CourseIncludes = ({
   Language,
 }: CourseIncludesProps) => {
   const items = [
-    { label: "Level", value: Level, icon: Database, span: "" },
+    { label: "Level", value: Level, icon: Database },
     { label: "Video", value: Video, icon: Play, span: "Videos" },
     { label: "Duration", value: Duration, icon: Clock3, span: "Hours" },
     {
       label: "Certificate",
       value: Certificate ? "Yes" : "No",
       icon: BadgeCheck,
-      span: "",
     },
-    { label: "Language", value: Language, icon: Volume2, span: "" },
+    { label: "Language", value: Language, icon: Volume2 },
   ];
 
   return (
-    <div className="flex flex-col gap-6 border-[1px] rounded-2xl p-5 w-full">
+    <div className="flex flex-col gap-6 border-[1px] border-border rounded-2xl p-8 font-body text-text w-full">
       <h1 className="text-2xl font-bold">Course Includes :</h1>
       <div className="flex gap-3 flex-col">
         {items.map(({ label, value, icon: Icon, span }) => (
@@ -38,11 +37,11 @@ const CourseIncludes = ({
             key={label}
             className="flex gap-4 w-full justify-between items-center"
           >
-            <h3 className="flex gap-1 justify-center items-center text-sm font-mono">
+            <h3 className="flex gap-1 justify-center items-center text-sm ">
               <Icon size={16} strokeWidth={1} color="#858A8C" />
               {label}
             </h3>
-            <div className="flex gap-1 text-sm font-mono">
+            <div className="flex gap-1 text-sm ">
               <p>{value}</p>
               <span>{span}</span>
             </div>
