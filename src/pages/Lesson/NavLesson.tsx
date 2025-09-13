@@ -1,7 +1,7 @@
 import BtnBlue from "@/components/shared/Buttons/BtnBlue";
 import { useNavigate, useParams } from "react-router-dom";
 
-const NavLesson = () => {
+const NavLesson = ({ title }: { title: string }) => {
   const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
   const numId = id ? parseInt(id) : 0;
@@ -23,9 +23,7 @@ const NavLesson = () => {
           handlePrevious();
         }}
       />
-      <h1 className="font-semibold md:text-2xl line-clamp-1 ">
-        Introduction to UI/UX
-      </h1>
+      <h1 className="font-semibold md:text-2xl line-clamp-1 ">{title}</h1>
       <BtnBlue
         text="Next"
         onClick={() => {
