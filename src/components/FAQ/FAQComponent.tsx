@@ -17,44 +17,51 @@ const FAQComponent: React.FC<FAQComponentProps> = ({
   subtitle,
   faqs,
 }) => {
-  const [openItems, setOpenItems] = useState<number[]>([]);
+  const [openItem, setOpenItem] = useState<number | null>(null);
 
   const toggleItem = (id: number) => {
-    setOpenItems((prev) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
-    );
+    setOpenItem((prevOpenItem) => (prevOpenItem === id ? null : id));
   };
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 py-12">
+    <div className="w-full px-0 py-6">
       {/* Title Section */}
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">{title}</h2>
+      <div className="text-center mb-8">
+        <h2 className="text-5xl font-bold text-gray-900 mb-6">{title}</h2>
         {subtitle && (
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">{subtitle}</p>
+          <p className="text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
+            {subtitle}
+          </p>
         )}
       </div>
 
-      {/* FAQ Grid */}
-      <div className="grid md:grid-cols-2 gap-6">
+      {/* FAQ Grid - Two Columns */}
+      <div
+        className="grid md:grid-cols-2 gap-8"
+        style={{ gridAutoRows: "max-content" }}
+      >
         {faqs.map((faq) => (
           <div
             key={faq.id}
-            className="bg-gray-100 rounded-lg p-6 transition-all duration-200 hover:shadow-md"
+            className={`w-full rounded-xl p-8 transition-all duration-200 hover:shadow-lg ${
+              openItem === faq.id
+                ? "bg-white border-2 border-primary-1 shadow-lg"
+                : "bg-gray-100"
+            }`}
           >
             {/* Question Header */}
             <button
               onClick={() => toggleItem(faq.id)}
               className="w-full flex justify-between items-center text-left group"
-              aria-expanded={openItems.includes(faq.id)}
+              aria-expanded={openItem === faq.id}
             >
-              <h3 className="text-lg font-semibold text-gray-900 pr-4 group-hover:text-primary-1 transition-colors">
+              <h3 className="text-xl font-semibold text-gray-900 pr-6 group-hover:text-primary-1 transition-colors leading-relaxed">
                 {faq.question}
               </h3>
               <div className="flex-shrink-0">
                 <svg
-                  className={`w-6 h-6 text-primary-1 transition-transform duration-200 ${
-                    openItems.includes(faq.id) ? "rotate-45" : ""
+                  className={`w-8 h-8 text-primary-1 transition-transform duration-200 ${
+                    openItem === faq.id ? "rotate-45" : ""
                   }`}
                   fill="none"
                   stroke="currentColor"
@@ -70,15 +77,19 @@ const FAQComponent: React.FC<FAQComponentProps> = ({
               </div>
             </button>
 
-            {/* Answer Content */}
+            {/* Answer Content - Normal Flow */}
             <div
-              className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                openItems.includes(faq.id)
-                  ? "max-h-96 opacity-100 mt-4"
-                  : "max-h-0 opacity-0"
+              className={`transition-all duration-300 ease-in-out ${
+                openItem === faq.id
+                  ? "mt-4 opacity-100"
+                  : "h-0 overflow-hidden opacity-0"
               }`}
             >
-              <div className="text-gray-700 leading-relaxed">{faq.answer}</div>
+              {openItem === faq.id && (
+                <div className="text-gray-700 leading-relaxed">
+                  {faq.answer}
+                </div>
+              )}
             </div>
           </div>
         ))}
