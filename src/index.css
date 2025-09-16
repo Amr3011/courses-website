@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   padding: 0;
   margin: 0;
@@ -16,4 +15,30 @@ body {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+}
+
+/* ------------- ELEMENT TOP RIGHT ------------- */
+.selector {
+  border-bottom-left-radius: 10px;
+  padding-inline: 15px;
+  padding-block: 8px;
+}
+.selector::before,
+.selector::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 15px;
+  height: 100%;
+  background-color: transparent;
+  border-top-right-radius: 30px;
+  box-shadow: 0 -20px 0 0 #fefefe;
+}
+.selector::before {
+  top: 0;
+  right: 100%;
+}
+.selector::after {
+  top: 100%;
+  right: 0;
 }

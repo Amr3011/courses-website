@@ -127,6 +127,6 @@ const Chapters = [
 ];
 
 export const useStore = create(() => ({
-    Chapters: Chapters,
+  Chapters: Chapters,
 
 }))
