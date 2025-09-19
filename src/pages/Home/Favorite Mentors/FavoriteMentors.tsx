@@ -3,14 +3,14 @@ import RightMentor from "./RightMentor";
 
 const FavoriteMentors = () => {
   return (
-    <div className="container my-28 Frames-Sec">
+    <div className="container my-28 ">
       <HeaderSec
         Ftitle="Favorite"
         Ltitle="from Our Community"
         paragraph="Meet top-tier mentors ready to guide your learning journey with hands-on knowledge and industry experience."
         spantitle="Mentors"
       />
-      <div className="flex gap-14 my-14 ">
+      <div className="flex gap-14 py-14 my-14 h-screenjustify-center items-center Frames-Sec  ">
         <LeftMentor />
         <RightMentor />
       </div>

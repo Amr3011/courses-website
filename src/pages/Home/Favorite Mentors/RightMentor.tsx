@@ -29,7 +29,7 @@ const RightMentor = () => {
     });
   }, []);
   return (
-    <div className="right-mentor-wrapper flex-1">
+    <div className="right-mentor-wrapper flex-1 ">
       <div className="aspect-square relative">
         <div className="frame absolute inset-0 frame z-[2]">
           <img
