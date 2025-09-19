@@ -11,7 +11,7 @@ const LeftMentor = () => {
   useGSAP(() => {
     const cards = gsap.utils.toArray(".card-mentor") as HTMLElement[];
 
-    gsap.set(cards, { y: "100%" });
+    gsap.set(cards, { y: "100vh" });
     gsap.set(cards[0], { y: "0%" });
 
     const tl = gsap.timeline({
@@ -20,16 +20,15 @@ const LeftMentor = () => {
         start: "top top",
         end: `+=${cards.length * 450}px`,
         scrub: 1.5,
-        markers: true,
       },
     });
 
     cards.forEach((_, i) => {
       if (i < cards.length - 1) {
         tl.to(cards[i], {
-          y: "-100%",
+          y: "-100vh",
           duration: 0.4,
-          ease: "none",
+          ease: "power2.inOut",
         })
           .to(
             cards[i + 1],
@@ -47,7 +46,7 @@ const LeftMentor = () => {
 
   return (
     <div className="left-mentor-wrapper flex-1 ">
-      <div className="aspect-square relative overflow-hidden">
+      <div className="aspect-square relative">
         <div className="card-mentor absolute inset-0 flex flex-col gap-4 items-center justify-center w-full h-full z-[2] ">
           <p className="text-sub-title text-xs font-semibold uppercase">
             {data[0].namePosition}

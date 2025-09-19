@@ -12,10 +12,9 @@ const RightMentor = () => {
       scrollTrigger: {
         trigger: ".Frames-Sec",
         start: "top top",
-        end: `+=${frames.length * 400}px`,
+        end: `+=${frames.length * 450}px`,
         scrub: 1.5,
         pin: true,
-        markers: true,
       },
     });
     frames.forEach((frame, i) => {
