@@ -22,7 +22,7 @@ const LeftMentor = () => {
           </ul>
         </div>
       </div>
-      <div className=" flex flex-col items-center justify-center w-full h-full ">
+      {/* {  <div className=" flex flex-col items-center justify-center w-full h-full ">
         <p className="text-sub-title text-xs font-semibold uppercase">
           Communication Trainer
         </p>
@@ -55,7 +55,7 @@ const LeftMentor = () => {
             ))}
           </ul>
         </div>
-      </div>
+      </div>} */}
     </div>
   );
 };
