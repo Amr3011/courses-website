@@ -10,7 +10,7 @@ const FavoriteMentors = () => {
         paragraph="Meet top-tier mentors ready to guide your learning journey with hands-on knowledge and industry experience."
         spantitle="Mentors"
       />
-      <div className="flex gap-14 py-14 my-14 h-screen justify-center items-center Frames-Sec">
+      <div className="flex gap-14 py-14  h-screen justify-center items-center Frames-Sec">
         <LeftMentor />
         <RightMentor />
       </div>
