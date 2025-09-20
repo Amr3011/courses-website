@@ -2,7 +2,7 @@ import BannerSec from "@/components/shared/Banner/BannerSec.tsx";
 import { FAQComponent, faqData } from "@/components/FAQ";
 import type { FAQItem } from "@/components/FAQ";
 
-const additionalFAQs: FAQItem[] = [
+ const additionalFAQs: FAQItem[] = [
   {
     id: 7,
     question: "What types of courses does Vintar offer?",

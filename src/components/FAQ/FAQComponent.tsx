@@ -12,10 +12,20 @@ interface FAQComponentProps {
   faqs: FAQItem[];
 }
 
+interface FAQComponentProps {
+  title?: string;
+  subtitle?: string;
+  faqs: FAQItem[];
+  cols?: number; // Added cols parameter to the interface
+  WithOutheading?: boolean;
+}
+
 const FAQComponent: React.FC<FAQComponentProps> = ({
   title = "Get to Know Vintar Better",
   subtitle,
   faqs,
+  cols = 2,
+  WithOutheading,
 }) => {
   const [openItem, setOpenItem] = useState<number | null>(null);
 
@@ -26,24 +36,26 @@ const FAQComponent: React.FC<FAQComponentProps> = ({
   return (
     <div className="w-full px-0 py-6">
       {/* Title Section */}
-      <div className="text-center mb-8">
-        <h2 className="text-5xl font-bold text-gray-900 mb-6">{title}</h2>
-        {subtitle && (
-          <p className="text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
-            {subtitle}
-          </p>
-        )}
-      </div>
+      {!WithOutheading && (
+        <div className="text-center mb-8">
+          <h2 className="text-5xl font-bold text-gray-900 mb-6">{title}</h2>
+          {subtitle && (
+            <p className="text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
+              {subtitle}
+            </p>
+          )}
+        </div>
+      )}
 
-      {/* FAQ Grid - Two Columns */}
+      {/* FAQ Grid - Dynamic Columns */}
       <div
-        className="grid md:grid-cols-2 gap-8"
+        className={`grid md:grid-cols-${cols} gap-8`}
         style={{ gridAutoRows: "max-content" }}
       >
         {faqs.map((faq) => (
           <div
             key={faq.id}
-            className={`w-full rounded-xl p-8 transition-all duration-200 hover:shadow-lg ${
+            className={`w-full rounded-xl p-4 px-6 transition-all duration-200 hover:shadow-lg ${
               openItem === faq.id
                 ? "bg-white border-2 border-primary-1 shadow-lg"
                 : "bg-gray-100"
