@@ -4,7 +4,7 @@ const Questions = () => {
   return (
     <div className="container my-10">
       <div className="flex ">
-        <div className="flex-1 py-28">
+        <div className="flex-1 pt-28">
           <div className="sticky top-[50px]  max-w-lg">
             <h1 className="text-5xl font-semibold max-w-[400px] ">
               Frequently Asked Questions
