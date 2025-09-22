@@ -81,7 +81,6 @@ const StudentSuccess = () => {
         start: "top bottom",
         end: `400px`,
         scrub: 1.5,
-        markers: true,
       },
     });
   }, []);
