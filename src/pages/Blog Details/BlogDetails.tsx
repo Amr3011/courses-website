@@ -1,7 +1,12 @@
 import BannerSec from "@/components/shared/Banner/BannerSec";
 import CardText from "@/components/shared/Cards/CardText";
+import { useStore } from "@/store/store";
+import { useParams } from "react-router-dom";
 
 const BlogDetails = () => {
+  const { id } = useParams();
+  const blogPosts = useStore((state) => state.blogPosts);
+  const post = blogPosts.find((el) => el.id === Number(id));
   const socialMedia = [
     {
       link: "www.google.com",
@@ -24,7 +29,7 @@ const BlogDetails = () => {
       />
       <div className="mx-24 my-28">
         <img
-          src="https://cdn.prod.website-files.com/681546135f34d96fc2aab532/6842da0f89d385e56b96e2dd_pexels-ivan-samkov-8127702%20(1)-p-1600.webp"
+          src={post?.image}
           alt="img"
           className="max-h-[450px] rounded-xl w-full object-cover"
         />
