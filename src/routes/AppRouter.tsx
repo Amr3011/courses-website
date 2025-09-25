@@ -11,21 +11,24 @@ import BlogDetails from "@/pages/Blog Details/BlogDetails";
 import MentorsDetails from "@/pages/Mentors Details/MentorsDetails";
 import Contact_Us from "@/pages/Contact_Us/Contact_Us";
 import Blog from "@/pages/Blog/blog";
+import Layout from "@/components/layout/Layout";
 const AppRouter = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/courses" element={<Courses />} />
-      <Route path="/contact" element={<Contact_Us />} />
-      <Route path="/PurchasedCourses" element={<All_PurchasedCourses />} />
-      <Route path="/FAQ" element={<Faq />} />
-      <Route path="/Lesson/*" element={<Lesson />} />
-      <Route path="/AllMentors" element={<AllMentors />} />
-      <Route path="/AllMentors/:id" element={<MentorsDetails />} />
-      <Route path="/Blog" element={<Blog />} />
-      <Route path="/Blog/:id" element={<BlogDetails />} />
-      <Route path="/Login" element={<Login />} />
-      <Route path="/SignUp" element={<SignUp />} />
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/contact" element={<Contact_Us />} />
+        <Route path="/PurchasedCourses" element={<All_PurchasedCourses />} />
+        <Route path="/FAQ" element={<Faq />} />
+        <Route path="/Lesson/*" element={<Lesson />} />
+        <Route path="/AllMentors" element={<AllMentors />} />
+        <Route path="/AllMentors/:id" element={<MentorsDetails />} />
+        <Route path="/Blog" element={<Blog />} />
+        <Route path="/Blog/:id" element={<BlogDetails />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/SignUp" element={<SignUp />} />
+      </Route>
     </Routes>
   );
 };

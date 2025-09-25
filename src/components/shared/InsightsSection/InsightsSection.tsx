@@ -45,7 +45,7 @@ const InsightsSection = () => {
   ];
 
   return (
-    <section className="w-full bg-gray-50 py-16 md:py-24">
+    <section className="w-full  py-16 md:py-24">
       <div className="max-w-[1400px] mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
