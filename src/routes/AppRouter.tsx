@@ -12,13 +12,17 @@ import MentorsDetails from "@/pages/Mentors Details/MentorsDetails";
 import Contact_Us from "@/pages/Contact_Us/Contact_Us";
 import Blog from "@/pages/Blog/blog";
 import Layout from "@/components/layout/Layout";
+import { Explore_Courses } from "@/pages/Explore_Courses/Explore_Courses";
+import About from "@/pages/About/About";
 const AppRouter = () => {
   return (
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact_Us />} />
+        <Route path="/ExploreCourses" element={<Explore_Courses />} />
         <Route path="/PurchasedCourses" element={<All_PurchasedCourses />} />
         <Route path="/FAQ" element={<Faq />} />
         <Route path="/Lesson/*" element={<Lesson />} />
