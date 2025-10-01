@@ -33,7 +33,7 @@ const Navbar = () => {
               About
             </Link>
             <Link
-              to="/courses"
+              to="/ExploreCourses"
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
             >
               Courses
