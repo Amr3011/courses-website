@@ -1,9 +1,11 @@
 import BannerSec from "@/components/shared/Banner/BannerSec";
 import AboutStorySection from "@/components/shared/AboutStorySection/AboutStorySection";
+import WhatSetsUsApart from "@/components/shared/WhatSetsUsApart/WhatSetsUsApart";
+import LearnFromExpertMentors from "@/components/shared/LearnFromExpertMentors/LearnFromExpertMentors";
 
 const About = () => {
   return (
-    <div>
+    <>
       <div className="w-full max-w-[1400px] justify-center mx-auto px-4">
         <BannerSec
           title={"About Vintar"}
@@ -16,7 +18,13 @@ const About = () => {
 
       {/* About Story Section */}
       <AboutStorySection />
-    </div>
+
+      {/* What Sets Us Apart Section */}
+      <WhatSetsUsApart />
+
+      {/* Learn from Expert Mentors Section */}
+      <LearnFromExpertMentors />
+    </>
   );
 };
 
