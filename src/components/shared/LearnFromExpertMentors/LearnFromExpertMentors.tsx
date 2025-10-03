@@ -1,98 +1,53 @@
-import { FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import MentorCard from "@/components/shared/MentorCard/MentorCard";
 
 const LearnFromExpertMentors = () => {
-  const mentors = [
-    {
-      img: "/assets/instructor.webp",
-      name: "Amanda Reis",
-      position: "BUSINESS COACH",
-    },
-    {
-      img: "/assets/instructor.webp",
-      name: "Brian Yusuf",
-      position: "LANGUAGE TRAINER",
-    },
-    {
-      img: "/assets/instructor.webp",
-      name: "David Tan",
-      position: "WEB DEVELOPER",
-    },
-    {
-      img: "/assets/instructor.webp",
-      name: "Kevin Lau",
-      position: "MARKETING LEAD",
-    },
-  ];
-
   return (
-    <section className="w-full max-w-[1400px] mx-auto px-4 py-16 md:py-24">
+    <section className="w-full mx-auto px-4 py-16 md:py-24 bg-background-accent">
       {/* Header Section */}
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-          Learn from Expert <span className="text-blue-600">Mentors</span>
+          What Sets Us <span className="text-blue-600">Apart</span> in
+          <br />
+          Vintar Academy
         </h2>
         <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-          Meet top-tier mentors ready to guide your learning journey with
-          hands-on knowledge and industry experience.
+          We're an online learning platform dedicated to helping people upskill
+          and grow. With expert instructors and flexible courses, we're here to
+          support your journey.
         </p>
       </div>
 
-      {/* Mentors Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-        {mentors.map((mentor, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
-          >
-            {/* Mentor Image */}
-            <div className="relative">
-              <img
-                src={mentor.img}
-                alt={mentor.name}
-                className="w-full h-64 object-cover"
-              />
-            </div>
-
-            {/* Mentor Info */}
-            <div className="p-6 text-center">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
-                {mentor.name}
-              </h3>
-              <p className="text-sm font-medium text-gray-500 mb-4 tracking-wide">
-                {mentor.position}
-              </p>
-
-              {/* Social Media Icons */}
-              <div className="flex justify-center gap-4">
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-gray-600 transition-colors"
-                >
-                  <FaTwitter size={20} />
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-gray-600 transition-colors"
-                >
-                  <FaLinkedin size={20} />
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-gray-600 transition-colors"
-                >
-                  <FaInstagram size={20} />
-                </a>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* View All Button */}
-      <div className="text-center">
-        <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-full transition-colors duration-300">
-          View All Mentors
-        </button>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+        <MentorCard
+          title="Expert Mentor Guidance"
+          features={[
+            "1-on-1 Q&A sessions",
+            "Feedback on projects",
+            "Mentor-led workshops",
+          ]}
+          statistics={[
+            { value: "29+", label: "Active Mentors" },
+            { value: "4.9", label: "Average Rating" },
+          ]}
+          image="/assets/instructor.webp"
+          imageAlt="Expert Mentor"
+          description="Get expert feedback and support directly from experienced industry mentors."
+        />
+        <MentorCard
+          title="Career-Focused Curriculum"
+          features={[
+            "Job-ready learning paths",
+            "Portfolio templates",
+            "Resume prep tools",
+          ]}
+          statistics={[
+            { value: "78%", label: "Career Growth" },
+            { value: "120+", label: "Mentor Rating" },
+          ]}
+          image="/assets/public.avif"
+          imageAlt="Career-Focused Learning"
+          description="Courses tailored for job success with real tools, portfolios, and career prep."
+        />
       </div>
     </section>
   );
